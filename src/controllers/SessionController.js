@@ -12,6 +12,8 @@ module.exports = {
             .first()
             .catch((err) => { console.log(err) });
 
+        console.log(user);
+
         if (user) {
             if (user.password === password) {
                 return res.status(200).json({name: user.name});
